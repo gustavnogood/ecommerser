@@ -78,13 +78,18 @@ body {
     align-items: start;
 }
 
+
+
 #pictures {
     display: grid;
     grid-template-rows: 445px 88px;
+    grid-template-columns: repeat(4, 1fr); /* Define 4 evenly spaced columns */
     grid-gap: 20px;
     align-items: start;
     padding-top: 30px;
     justify-items: center;
+    width: 445px;
+    position: relative;
 }
 
 #pictures img[alt="pickedImage"] {
@@ -92,12 +97,17 @@ body {
     height: 88px;
     border-radius: 10px;
     opacity: 0.5;
+    object-fit: cover;
 }
 
 #pictures img[alt="mainProductimg"] {
     grid-column: 1 / span 4;
     grid-row: 1;
+    width: 100%;  /* This will make the image take the full width of its grid cell */
+    height: 100%; /* This will make the image take the full height of its grid cell */
+    object-fit: cover; /* This will ensure the image covers the entire space of its grid cell without distorting its aspect ratio */
 }
+
 
 #textbox {
     display: grid;
