@@ -1,8 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ImageGallery from './ImageGallery';
 import CartItemControl from './CartItemControl';
 
 function MainContent() {
+
+  function handleCartClick() {
+    setShowPopup(true);
+  }
+  const [showPopup, setShowPopup] = useState(false);
+
   return (
     <div id="main">
       <ImageGallery />
@@ -12,9 +18,9 @@ function MainContent() {
         <p>Glid runt i stans fetaste dojjer, lämna myggjägarna och salmiakbalkarna hemma för nu blir fest!</p>
         <p id="price">$125.00</p>
         <p id="sum">$250.00</p>
-        <div id="buttons">
-          <CartItemControl />
-        </div>
+        
+        <CartItemControl onAddToCart={handleCartClick} showPopup={showPopup} onClose={() => setShowPopup(false)} />
+        
       </div>
     </div>
   );

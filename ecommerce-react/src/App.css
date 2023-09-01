@@ -224,3 +224,61 @@ body {
     font-size: 18px;
     
 }
+.popup-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    backdrop-filter: blur(5px); /* This creates the blur effect */
+    z-index: 999; /* Ensure it appears below the popup but above other content */
+  }
+  
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure it appears above the backdrop and other content */
+  }
+
+  .action-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    background-color: #F6F8FD;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+.quantity-btn {
+    background: none;
+    color: #F6F8FD;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.quantity-value {
+    margin: 0 5px;
+}
+
+.add-to-cart-btn {
+    background-color: #FF7E1B;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+}
